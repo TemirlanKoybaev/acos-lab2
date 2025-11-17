@@ -1,4 +1,4 @@
-// Сервер для лабораторной работы.
+// Сервер
 // Делает следующее:
 // 1) Слушает порт 5000 по TCP.
 // 2) Принимает одного клиента за раз.
@@ -27,7 +27,7 @@ const int BACKLOG = 5;
 const int BUF_SIZE = 1024;
 const char HISTORY_FILE[] = "history.txt";
 
-// Очень простая функция для записи строки в файл истории.
+// Функция для записи строки в файл истории.
 void append_history(const string& prefix, const string& msg) {
     ofstream out(HISTORY_FILE, ios::app);
     if (!out.is_open()) {
